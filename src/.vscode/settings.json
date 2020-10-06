@@ -5,8 +5,11 @@
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features",
   },
+  "[scss]": {
+    "editor.defaultFormatter": "HookyQR.beautify"
+  },
   "files.insertFinalNewline": true,
   "editor.formatOnSaveMode": "modifications",
   "editor.formatOnSave": true,
-  "editor.tabSize": 2
+  "editor.tabSize": 2,
 }

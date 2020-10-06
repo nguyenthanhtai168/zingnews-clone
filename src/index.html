@@ -4,11 +4,38 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/style.css">
   <title>Hello, world!</title>
 </head>
 
 <body>
-  ok
+  <header id="header" class="container header">
+    <a href="#" class="brand">
+      <img src="assets/img/logo-zing-home.svg" alt="logo">
+    </a>
+  
+    <nav class="nav">
+      <ul data-bind="foreach: menu" class="menu">
+        <li>
+          <a href="" data-bind="text: $data"></a>
+        </li>
+      </ul>
+    </nav>
+  
+    <div class="align-center d-flex header__right">
+      <a href="#">
+        <i class="material-icons icon">search</i>
+      </a>
+      <a href="#" class="ml-2">
+        <i class="material-icons icon">person</i>
+      </a>
+    </div>
+  
+  </header>
 </body>
 
+<script src="assets/js/knockout-3.5.1.js"></script>
+<script src="assets/js/app.js"></script>
 </html>
