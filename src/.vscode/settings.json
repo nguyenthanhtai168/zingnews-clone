@@ -1,0 +1,12 @@
+{
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 120,
+  "html.autoClosingTags": false,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+  },
+  "files.insertFinalNewline": true,
+  "editor.formatOnSaveMode": "modifications",
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2
+}
