@@ -3,39 +3,132 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+  <link rel="stylesheet"
+    href="assets/css/reset.css">
+  <link rel="stylesheet"
+    href="assets/css/style.css">
   <title>Hello, world!</title>
 </head>
 
 <body>
-  <header id="header" class="container header">
-    <a href="#" class="brand">
-      <img src="assets/img/logo-zing-home.svg" alt="logo">
+  <header id="header"
+    class="container header">
+    <a href="#"
+      class="brand">
+      <img src="assets/img/logo-zing-home.svg"
+        alt="logo">
     </a>
-  
+
     <nav class="nav">
-      <ul data-bind="foreach: menu" class="menu">
+      <ul data-bind="foreach: menu"
+        class="menu">
         <li>
-          <a href="" data-bind="text: $data"></a>
+          <a href=""
+            data-bind="text: $data"></a>
         </li>
       </ul>
     </nav>
-  
+
     <div class="align-center d-flex header__right">
       <a href="#">
         <i class="material-icons icon">search</i>
       </a>
-      <a href="#" class="ml-2">
+      <a href="#"
+        class="ml-2">
         <i class="material-icons icon">person</i>
       </a>
     </div>
-  
+
   </header>
+  <!-- wrapper -->
+  <div id="wrapper"
+    class="container">
+    <!--hash tag-->
+    <section id="hot-new">
+      <div class="d-inline-flex">
+        <img src="http://static-znews.zadn.vn/images/stat.svg"
+          class="mr-3" />
+        <ul data-bind="foreach: hashTag"
+          class="hash-tag d-inline-flex">
+          <li class="hash-tag-item">
+            <a class="link" data-bind="attr: {href: url}, text: title"></a>
+          </li>
+        </ul>
+      </div>
+      <div class="weather d-inline-flex">
+        <p class="mr-3"
+          style="font-weight: 600;"><b>Đồng Nai</b></p>
+        <p class="mr-3"><b>28°C / 24-29°C</b></p>
+        <img src="https://static-znews.zadn.vn/images/icons/weather/v2/cloudy.png"
+          class="ml-2">
+      </div>
+    </section>
+    <!--Featured news-->
+    <div class="news d-flex flex-fill mt-3"
+      id="featured-news">
+
+      <div id="trending-news" data-bind="foreach: trendingNews">
+        <article class="trending-item d-flex flex-fill px-1 pt-1">
+          <div class="thumbnail">
+            <a data-bind="attr: {href: url}">
+              <img data-bind="attr: {src: img, alt: alt}" />
+            </a>
+          </div>
+          <div class="article-title px-2">
+            <span class="fw-600"
+              data-bind="text: title"></span>
+          </div>
+          <div></div>
+        </article>
+      </div>
+      
+      <!--Primary-->
+      <div class="featured-primary mr-3" data-bind="foreach: primary">
+
+        <article class="d-flex flex-fill">
+          <div class="thumbnail">
+            <a data-bind="attr: {href: url}">
+              <img data-bind="attr: {src: img, alt: alt}" />
+            </a>
+            <p class="primary-title"
+              data-bind="text: title"></p>
+            <p class="primary-desc"
+              data-bind="text: desc"></p>
+
+            <ul data-bind="foreach: related">
+              <li>
+                <a dat-bind="attr: {href:url}, text: title "></a>
+              </li>
+            </ul>
+          </div>
+          <div></div>
+        </article>
+      </div>
+
+      <!--Related Primary-->
+      <div id="featured-related-news" data-bind="foreach: primaryRelated">
+        <article class="d-flex flex-fill pb-3">
+          <div class="thumbnail">
+            <a data-bind="attr: {href: url}">
+              <img data-bind="attr: {src: img, alt: alt}" />
+            </a>
+            <p class="title fw-600 pt-2"
+              data-bind="text: title"></p>
+          </div>
+          <div></div>
+        </article>
+      </div>
+
+    </div>
+  </div>
+
 </body>
 
 <script src="assets/js/knockout-3.5.1.js"></script>
 <script src="assets/js/app.js"></script>
+
 </html>
