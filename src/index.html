@@ -65,6 +65,7 @@
         <p class="mr-3"><b>28°C / 24-29°C</b></p>
         <img src="https://static-znews.zadn.vn/images/icons/weather/v2/cloudy.png"
           class="ml-2">
+          <i class="material-icons icon ml-2 dropdown-city">arrow_circle_down</i>
       </div>
     </section>
     <!--Featured news-->
@@ -79,8 +80,8 @@
             </a>
           </div>
           <div class="article-title px-2">
-            <span class="fw-600"
-              data-bind="text: title"></span>
+            <a class="fw-600 link"
+              data-bind="attr: {href: url}, text: title"></a>
           </div>
           <div></div>
         </article>
@@ -94,8 +95,8 @@
             <a data-bind="attr: {href: url}">
               <img data-bind="attr: {src: img, alt: alt}" />
             </a>
-            <p class="primary-title"
-              data-bind="text: title"></p>
+            <a class="primary-title link"
+              data-bind="attr: {href: url}, text: title"></a>
             <p class="primary-desc"
               data-bind="text: desc"></p>
 
@@ -116,14 +117,87 @@
             <a data-bind="attr: {href: url}">
               <img data-bind="attr: {src: img, alt: alt}" />
             </a>
-            <p class="title fw-600 pt-2"
-              data-bind="text: title"></p>
+            <a class="title fw-600 pt-2 link"
+              data-bind="attr: {href:url}, text: title"></a>
           </div>
           <div></div>
         </article>
       </div>
 
     </div>
+
+    <!-- books-->
+    <section>
+      <div>
+        <p>SÁCH CỦA BẠN</p>
+      </div>
+      <div>
+        <div class='demo-container'>
+          <div class='carousel'>
+            <input checked='checked' class='carousel__activator' id='carousel-slide-activator-1' name='carousel' type='radio'>
+            <input class='carousel__activator' id='carousel-slide-activator-2' name='carousel' type='radio'>
+            <input class='carousel__activator' id='carousel-slide-activator-3' name='carousel' type='radio'>
+            <div class='carousel__controls'>
+              <label class='carousel__control carousel__control--forward' for='carousel-slide-activator-2'>
+                👉
+              </label>
+            </div>
+            <div class='carousel__controls'>
+              <label class='carousel__control carousel__control--backward' for='carousel-slide-activator-1'>
+                👈
+              </label>
+              <label class='carousel__control carousel__control--forward' for='carousel-slide-activator-3'>
+                👉
+              </label>
+            </div>
+            <div class='carousel__controls'>
+              <label class='carousel__control carousel__control--backward' for='carousel-slide-activator-2'>
+                👈
+              </label>
+            </div>
+            <div class='carousel__screen'>
+              <div class='carousel__track'>
+                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                  <div class='demo-content'>
+                    a
+                  </div>
+                </div>
+                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                  <div class='demo-content'>
+                    b
+                  </div>
+                </div>
+                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                  <div class='demo-content'>
+                    c
+                  </div>
+                </div>
+                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                  <div class='demo-content'>
+                    d
+                  </div>
+                </div>
+                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                  <div class='demo-content'>
+                    e
+                  </div>
+                </div>
+                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                  <div class='demo-content'>
+                    f
+                  </div>
+                </div>
+                <div class='carousel__item carousel__item--mobile-in-1 carousel__item--tablet-in-2 carousel__item--desktop-in-3'>
+                  <div class='demo-content'>
+                    g
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 
 </body>

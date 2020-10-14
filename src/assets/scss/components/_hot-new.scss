@@ -1,15 +1,17 @@
 @import "display";
 
 @keyframes gradient {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .link {
@@ -19,6 +21,10 @@
     text-decoration: none;
     color: #333;
     cursor: pointer;
+
+    &:hover {
+        color: var(--primary)
+    }
 }
 
 #hot-new {
@@ -55,10 +61,11 @@
                 -webkit-animation: gradient 15s ease infinite;
                 animation: gradient 15s ease infinite;
 
-                :before{
-                    color:#fff;
+                :before {
+                    color: #fff;
                 }
-                .link{
+
+                .link {
                     color: #fff;
                 }
             }
@@ -76,6 +83,19 @@
     img {
         height: 2rem;
         width: auto;
+    }
+
+    .dropdown-city {
+        display: none;
+        opacity: 0;
+    }
+
+    &:hover {
+        .dropdown-city {
+            display: block;
+            opacity: 1;
+            transition: all 2s linear;
+        }
     }
 }
 
@@ -155,3 +175,39 @@
     }
 
 }
+
+.demo-content {
+    color: #fff;
+    display: flex;
+    font-family: Helvetica;
+    font-weight: 100;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    border-radius: 3px;
+    font-size: 56px;
+    height: 250px;
+    width: 100%;
+  }
+
+  .carousel__item:nth-child(1) .demo-content {
+    background-color: #216485;
+  }
+  .carousel__item:nth-child(2) .demo-content {
+    background-color: #3692b6;
+  }
+  .carousel__item:nth-child(3) .demo-content {
+    background-color: #6fccc9;
+  }
+  .carousel__item:nth-child(4) .demo-content {
+    background-color: #a6e3cf;
+  }
+  .carousel__item:nth-child(5) .demo-content {
+    background-color: #aff0be;
+  }
+  .carousel__item:nth-child(6) .demo-content {
+    background-color: #527059;
+  }
+  .carousel__item:nth-child(7) .demo-content {
+    background-color: #243127;
+  }
